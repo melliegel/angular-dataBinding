@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Strings Management Panel: Homepage</h1>
+    
+    <div class="row">
+      <div class="col">
+          <h5>Input new string</h5>
+
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" name="string" [(ngModel)] = "newString"/>
+              <br /><span>{{ newString }} </span>
+            </div>
+            <input type="submit" class="btn btn-primary" name="Submit" [value]="btnText" (click)="addString()"/>
+          </form>
+          
+          
+        </div>
+        <div class="col">
+          <h5>Added strings ({{ itemCount }})</h5>
+          <div class="btn btn-success btn-string" *ngFor = "let string of strings; let i = index" (click)="removeString()">
+            {{ string }}
+            <span class="fa fa-remove"></span>
+          </div>
+        </div>
+    </div>  
+
+  </div>
+</div>

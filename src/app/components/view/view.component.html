@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Strings Management Panel: View All Strings</h1>
+
+    <div class="row">     
+
+      <div class="col">
+        <h5>Total strings ({{ itemTotal }})</h5>
+        <div class="btn btn-success btn-string" *ngFor = "let string of strings; let i = index" (click)="removeString()">
+          {{ string }}
+          <span class="fa fa-remove"></span>
+        </div>
+      </div>
+
+      <div class="col">
+          <button class="btn btn-danger" (click)="sendMeHome()">Back to Homepage</button>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
